@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+#clock {
+  font-size: 25rem;
+  /* white-space: nowrap; */
+  position: relative;
+}
+
+.seconds {
+  height: 150px;
+  width: 150px;
+  font-size: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 20vh;
+  transform: translate(-50%, -10%);
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.ml-left {
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  left: -5%;
+  animation: walkingRight 10s linear infinite;
+  height: 120px;
+  cursor: pointer;
+  transition: bottom 0.2s ease;
+}
+.ml-right {
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  right: -5%;
+  transform: scaleX(-1);
+  animation: walkingLeft 10s linear infinite;
+  height: 120px;
+  cursor: pointer;
+  transition: bottom 0.2s ease;
+}
+
+#squre {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  /* background-color: #ee0a33; */
+  background-color: lime;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+@keyframes walkingRight {
+  0% {
+    left: -500px;
+  }
+  100% {
+    /* left: calc(200% - 200px); */
+    left: 105%;
+  }
+}
+@keyframes walkingLeft {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 105%;
+  }
+}
+
+.jump {
+  bottom: 150px;
+  transition: bottom 0.1s ease;
+}
+
+.bang {
+  /* background: radial-gradient(red, rgb(236, 80, 80)); */
+  background: rgb(236, 80, 80);
+  color: black;
+}
+
+@media screen and (max-width: 992px) {
+  #clock {
+    font-size: 5rem;
+    width: 100vw;
+    text-align: center;
+  }
+  .seconds {
+    font-size: 2.5rem;
+    height: 100px;
+    width: 100px;
+    top: 30%;
+  }
+  .ml-left {
+    height: 60px;
+    /* width: 180px; */
+  }
+  .ml-right {
+    height: 60px;
+    /* width: 180px; */
+  }
+}
