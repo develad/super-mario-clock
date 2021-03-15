@@ -8,6 +8,7 @@
 
 body {
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +110,6 @@ body {
 @media screen and (max-width: 992px) {
   #clock {
     font-size: 5rem;
-    width: 100vw;
     text-align: center;
   }
   .seconds {
