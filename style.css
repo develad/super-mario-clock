@@ -120,10 +120,15 @@ body {
   }
   .ml-left {
     height: 60px;
+    bottom: 80px;
     /* width: 180px; */
   }
   .ml-right {
     height: 60px;
+    bottom: 80px;
     /* width: 180px; */
+  }
+  #squre {
+    bottom: 40px;
   }
 }
