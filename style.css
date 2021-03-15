@@ -97,7 +97,7 @@ body {
 }
 
 .jump {
-  bottom: 150px;
+  bottom: 220px;
   transition: bottom 0.1s ease;
 }
 
@@ -120,12 +120,13 @@ body {
   }
   .ml-left {
     height: 60px;
-    bottom: 100px;
+    transform: translateY(-60px);
     /* width: 180px; */
   }
   .ml-right {
     height: 60px;
-    bottom: 100px;
+    transform: translateY(-60px) rotateY(-180deg);
+
     /* width: 180px; */
   }
   #squre {
