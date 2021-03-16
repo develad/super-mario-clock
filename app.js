@@ -28,7 +28,7 @@ function getTime() {
   // clock.innerHTML = `${hours} : ${minutes}<span class="seconds">${seconds_str}</span>`;
   clock.innerHTML = `${hours} : ${minutes}`;
   +seconds_str < 10 ? (seconds_str = `0${+seconds_str}`) : +seconds_str;
-  console.log(seconds_str.split(' '));
+  // console.log(seconds_str.split(' '));
   seconds.innerHTML = `${seconds_str.split(' ')[0]}`;
   // seconds.innerHTML = `${hhmmss[2]}`;
   pageTitle.innerHTML = `${hours} : ${minutes}`;
