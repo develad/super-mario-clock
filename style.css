@@ -133,16 +133,16 @@ body {
   }
   .ml-left {
     height: 60px;
-    transform: translateY(-60px);
+    transform: translateY(-100px);
     /* width: 180px; */
   }
   .ml-right {
     height: 60px;
-    transform: translateY(-60px) rotateY(-180deg);
+    transform: translateY(-100px) rotateY(-180deg);
 
     /* width: 180px; */
   }
   #squre {
-    bottom: 60px;
+    bottom: 100px;
   }
 }
