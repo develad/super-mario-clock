@@ -20,15 +20,12 @@ function jump(jumpItem) {
 
 function getTime() {
   const dateTime = new Date();
-  console.log(dateTime.toTimeString());
+  // console.log(dateTime.toTimeString());
   const timeString = dateTime.toLocaleTimeString();
   let [hours, minutes, seconds_str] = timeString.split(':');
-
   +hours < 10 ? (hours = `0${hours}`) : hours;
-
   clock.innerHTML = `${hours} : ${minutes}`;
   +seconds_str < 10 ? (seconds_str = `0${+seconds_str}`) : +seconds_str;
-
   seconds.innerHTML = `${seconds_str.split(' ')[0]}`;
   pageTitle.innerHTML = `${hours} : ${minutes}`;
 }
