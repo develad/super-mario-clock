@@ -24,7 +24,6 @@ body {
 
 #clock {
   font-size: 25rem;
-  /* white-space: nowrap; */
   position: relative;
 }
 
@@ -49,7 +48,7 @@ body {
   bottom: 40px;
   left: -5%;
   animation: walkingRight 10s linear infinite;
-  height: 120px;
+  height: 80px;
   cursor: pointer;
   transition: bottom 0.2s ease;
 }
@@ -60,7 +59,7 @@ body {
   right: -5%;
   transform: scaleX(-1);
   animation: walkingLeft 10s linear infinite;
-  height: 120px;
+  height: 80px;
   cursor: pointer;
   transition: bottom 0.2s ease;
 }
@@ -71,7 +70,6 @@ body {
   width: 100%;
   bottom: 0;
   left: 0;
-  /* background-color: #ee0a33; */
   background-color: lime;
   display: flex;
   align-items: center;
@@ -79,24 +77,11 @@ body {
   color: black;
 }
 
-/* .continer {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: blue;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  bottom: 0;
-  left: 0;
-} */
-
 @keyframes walkingRight {
   0% {
     left: -500px;
   }
   100% {
-    /* left: calc(200% - 200px); */
     left: 105%;
   }
 }
@@ -115,7 +100,6 @@ body {
 }
 
 .bang {
-  /* background: radial-gradient(red, rgb(236, 80, 80)); */
   background: rgb(236, 80, 80);
   color: black;
 }
@@ -134,13 +118,10 @@ body {
   .ml-left {
     height: 60px;
     transform: translateY(-100px);
-    /* width: 180px; */
   }
   .ml-right {
     height: 60px;
     transform: translateY(-100px) rotateY(-180deg);
-
-    /* width: 180px; */
   }
   #squre {
     bottom: 100px;

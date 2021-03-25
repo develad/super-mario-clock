@@ -20,31 +20,22 @@ function jump(jumpItem) {
 
 function getTime() {
   const dateTime = new Date();
+  console.log(dateTime.toTimeString());
   const timeString = dateTime.toLocaleTimeString();
   let [hours, minutes, seconds_str] = timeString.split(':');
-  // const hhmmss = timeString.split(':');
-  // console.log(+hours);
+
   +hours < 10 ? (hours = `0${hours}`) : hours;
-  // clock.innerHTML = `${hours} : ${minutes}<span class="seconds">${seconds_str}</span>`;
+
   clock.innerHTML = `${hours} : ${minutes}`;
   +seconds_str < 10 ? (seconds_str = `0${+seconds_str}`) : +seconds_str;
-  // console.log(seconds_str.split(' '));
+
   seconds.innerHTML = `${seconds_str.split(' ')[0]}`;
-  // seconds.innerHTML = `${hhmmss[2]}`;
   pageTitle.innerHTML = `${hours} : ${minutes}`;
 }
 
 getTime();
 setInterval(getTime, 1000);
 
-// function moveMarios() {
-//   mlLeft.style.animationPlayState = 'running';
-//   mlRight.style.animationPlayState = 'paused';
-//   setTimeout(() => {
-//     mlLeft.style.animationPlayState = 'paused';
-//     mlRight.style.animationPlayState = 'running';
-//   }, 10000);
-// }
 function moveMarios() {
   mlLeft.classList.add('.ml-left');
   mlLeft.style.display = 'block';
