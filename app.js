@@ -1,9 +1,8 @@
-const pageTitle = document.querySelector('title');
 const clock = document.querySelector('#clock');
 const mlLeft = document.querySelector('.ml-left');
 const mlRight = document.querySelector('.ml-right');
 const seconds = document.querySelector('.seconds');
-const ONEUP_AUDIO = new Audio('./smb_fireball.wav');
+const oneUp = new Audio('./smb_fireball.wav');
 
 mlLeft.addEventListener('click', () => jump(mlLeft));
 mlRight.addEventListener('click', () => jump(mlRight));
@@ -11,7 +10,7 @@ mlRight.addEventListener('click', () => jump(mlRight));
 function jump(jumpItem) {
   jumpItem.classList.toggle('jump');
   seconds.classList.toggle('bang');
-  ONEUP_AUDIO.play();
+  oneUp.play();
   setTimeout(() => {
     jumpItem.classList.toggle('jump');
     seconds.classList.toggle('bang');
@@ -22,15 +21,8 @@ function getTime() {
   const dateTime = new Date();
   const currentTime = moment(dateTime).format('HH:mm:ss').split(':');
   const [hours, minutes, seconds_str] = currentTime;
-  // console.log(dateTime.toTimeString());
-  // const timeString = dateTime.toLocaleTimeString();
-  // let [hours, minutes, seconds_str] = timeString.split(':');
-  // +hours < 10 ? (hours = `0${hours}`) : hours;
-  clock.innerHTML = `${hours} : ${minutes}`;
-  // +seconds_str < 10 ? (seconds_str = `0${+seconds_str}`) : +seconds_str;
-  // seconds.innerHTML = `${seconds_str.split(' ')[0]}`;
+  clock.innerHTML = `${hours}:${minutes}`;
   seconds.innerHTML = `${seconds_str}`;
-  pageTitle.innerHTML = `${hours} : ${minutes}`;
 }
 
 getTime();
@@ -50,4 +42,4 @@ function moveMarios() {
 }
 
 moveMarios();
-setInterval(moveMarios, 20000); // double Time from the setTimeout above
+setInterval(moveMarios, 20000);
