@@ -123,6 +123,7 @@ body > div:nth-child(1) {
   left: 50%;
   z-index: -50;
   pointer-events: none;
+  filter: hue-rotate(-15deg);
 }
 
 .show-heart {
