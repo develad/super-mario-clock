@@ -11,11 +11,16 @@ mlLeft.addEventListener('click', () => jump(mlLeft));
 mlRight.addEventListener('click', () => jump(mlRight));
 
 let score = 0;
+let i = 0;
+const images = ['heart.png', 'mash.png', 'star1.png', 'dino.png'];
 
 function jump(jumpItem) {
   _score.innerHTML = `score: ${++score}`;
   if (score % 5 === 0) {
+    i === images.length ? (i = 0) : i;
+    _heart.src = images[i];
     _heart.classList.add('show-heart');
+    i++;
     gling.play();
     setTimeout(() => {
       _heart.classList.remove('show-heart');
