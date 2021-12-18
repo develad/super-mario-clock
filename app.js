@@ -5,6 +5,7 @@ const seconds = document.querySelector('.seconds');
 const _score = document.querySelector('.score');
 const _heart = document.querySelector('#heart');
 const oneUp = new Audio('./smb_fireball.wav');
+const gling = new Audio('./gling.wav');
 
 mlLeft.addEventListener('click', () => jump(mlLeft));
 mlRight.addEventListener('click', () => jump(mlRight));
@@ -15,6 +16,7 @@ function jump(jumpItem) {
   _score.innerHTML = `score: ${++score}`;
   if (score % 5 === 0) {
     _heart.classList.add('show-heart');
+    gling.play();
     setTimeout(() => {
       _heart.classList.remove('show-heart');
     }, 2000);
